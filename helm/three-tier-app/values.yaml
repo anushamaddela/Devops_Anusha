@@ -1,0 +1,10 @@
+frontend:
+  image: prodacr12345.azurecr.io/frontend:v1
+  replicas: 2
+
+backend:
+  image: prodacr12345.azurecr.io/backend:v1
+  replicas: 2
+
+service:
+  type: LoadBalancer

@@ -1,15 +1,16 @@
 from flask import Flask, jsonify
-import os
 
 app = Flask(__name__)
 
 @app.route('/')
+@app.route('/api')
 def home():
     return jsonify({
         "message": "Azure 3 Tier App Backend Running"
     })
 
 @app.route('/health')
+@app.route('/api/health')
 def health():
     return jsonify({
         "status": "healthy"
